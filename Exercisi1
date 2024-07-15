@@ -1,0 +1,19 @@
+{
+  "name": "string",
+  "adress": "string",
+  "phoneNumber": "number",
+  "email": "string",
+  "register_date": "Date",
+  "last_shoppings": [ 
+    {
+      "_id": "ObjectId",
+      "brand": "string",
+      "graduationL": "float",
+      "graduationD": "float",
+      "glassColorL": "string",
+      "glassColorR": "string",
+      "frameType": "string",
+      "price": "float"
+    } 
+  ]
+}
