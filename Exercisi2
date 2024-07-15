@@ -1,0 +1,23 @@
+{
+  "_id": "ObjectId",
+  "brand": "string",
+  "price": "float",
+  "provider": {
+      "_id": "ObjectId",
+      "providerName": "string",
+      "adress": {
+        "street": "string",
+        "number": "number",
+        "floor": ["number"],
+        "door": ["string"],
+        "city": "string",
+        "postal_code": "string",
+        "country": "string"
+      },
+    "client":{
+      "phone": "string",
+      "fax": ["number"],
+      "nif": "string"
+    }
+  }
+}
