@@ -1,23 +1,51 @@
-{
-  "_id": "ObjectId",
-  "brand": "string",
-  "price": "float",
-  "provider": {
-      "_id": "ObjectId",
-      "providerName": "string",
-      "adress": {
-        "street": "string",
-        "number": "number",
-        "floor": ["number"],
-        "door": ["string"],
-        "city": "string",
-        "postal_code": "string",
-        "country": "string"
+db.getCollection("ulleres").insertOne({
+  brand: "Brand",
+  frame: "Metallic",
+  price: 105.75,
+  provider: {
+    name: "Googles Associated SL",
+    address: {
+      street: "fake street, 123",
+      city: "Barcelona",
+      postal_code: 08020,
+      country: "Spain",
+    },
+    phone_number: "672346123",
+    nif: "B75034567",
+  },
+  bought_by: [
+    {
+      name: "Client 1",
+      address: {
+        street: "sant hipolit, 4, 1-1",
+        city: "Barcelona",
+        postal_code: 08030,
+        country: "spain",
       },
-    "client":{
-      "phone": "string",
-      "fax": ["number"],
-      "nif": "string"
-    }
-  }
-}
+      email: "jordipelaez05@gmail.com",
+      phone: "675273161",
+    },
+    {
+      name: "Client 2",
+      address: {
+        street: "ramon batlle, 25, 1-1",
+        city: "Barcelona",
+        postal_code: 08030,
+        country: "Spain",
+      },
+      email: "aleatoriocliente@gmail.com",
+      phone: "673987625",
+    },
+    {
+      name: "Client 3",
+      address: {
+        street: "ramon batlle, 25, 2-1",
+        city: "Barcelona",
+        postal_code: 08030,
+        country: "Spain",
+      },
+      email: "randomcliente@gmail.com",
+      phone: "672198463",
+    },
+  ],
+});
