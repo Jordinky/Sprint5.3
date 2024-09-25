@@ -1,19 +1,22 @@
-{
-  "name": "string",
-  "adress": "string",
-  "phoneNumber": "number",
-  "email": "string",
-  "register_date": "Date",
-  "last_shoppings": [ 
+db.getCollection("shopping_cart").insertOne({
+  name: "Client Name",
+  address: "Right Street, 123",
+  telephone: "678921235",
+  email: "email@email.com",
+  registered_date: "2023/09/23",
+  last_Shoppings: [
     {
-      "_id": "ObjectId",
-      "brand": "string",
-      "graduationL": "float",
-      "graduationD": "float",
-      "glassColorL": "string",
-      "glassColorR": "string",
-      "frameType": "string",
-      "price": "float"
-    } 
-  ]
-}
+      item: "Rayban",
+      graduation: {
+        left: 2.3,
+        right: 2.0,
+      },
+      glass_color: {
+        left: "Color1",
+        right: "Color2",
+      },
+      frame_Type: "Metallic",
+      price: 127.0,
+    },
+  ],
+});
