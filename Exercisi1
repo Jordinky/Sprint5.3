@@ -1,6 +1,14 @@
 db.getCollection("shopping_cart").insertOne({
   name: "Client Name",
-  address: "Right Street, 123",
+  address: {
+    street: "Right street",
+    number: 65,
+    floor: 6,
+    door: 9,
+    city: "NY",
+    postal_code: 384778,
+    country: "EEUU",
+  },
   telephone: "678921235",
   email: "email@email.com",
   registered_date: "2023/09/23",
@@ -19,8 +27,22 @@ db.getCollection("shopping_cart").insertOne({
       price: 127.0,
       provider: {
         name: "Googles Associated SL",
-        address: "Passeig de la zona franca 56",
+        address: {
+          street: "pg.Zona Franca",
+          number: 76,
+          floor: 7,
+          door: "5",
+          city: "Barcelona",
+          postal_code: 08021,
+          country: "Spain",
+        },
         phone_number: "675468932",
+        fax: "938877554",
+        nif: "B54967769",
     },
   ],
+  recommended_by: "client 3",
+  sold_by: {
+    employee_name: "Pepe",
+  },
 });
