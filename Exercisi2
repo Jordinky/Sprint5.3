@@ -1,3 +1,64 @@
+//tabla gafas
+{
+  "glasses": {
+    "_id": ObjectId(),
+    "brand": String,
+    "lenses": {
+      "leftLens": {
+        "graduation": String,
+        "color": String
+      },
+      "rightLens": {
+        "graduation": String,
+        "color": String
+      }
+    },
+    "frame": {
+      "type": String, 
+      "color": String
+    },
+    "price": Number,
+    "providerId": ObjectId 
+  }
+}
+//tabla clientes
+{
+  "customers": {
+    "_id": ObjectId(),
+    "name": String,
+    "address": {
+      "street": String,
+      "number": String,
+      "city": String,
+      "postalCode": String,
+      "country": String
+    },
+    "phone": String,
+    "email": String,
+    "registrationDate": Date,
+    "referredBy": ObjectId 
+  }
+}
+//tabla proveedores
+{
+  "provider": {
+    "_id": ObjectId(),
+    "name": String,
+    "address": {
+      "street": String,
+      "number": String,
+      "floor": String,
+      "door": String,
+      "city": String,
+      "postalCode": String,
+      "country": String
+    },
+    "phone": String,
+    "fax": String,
+    "NIF": String
+  }
+}
+//interfaz de la vista de gafas
 db.getCollection("ulleres").insertOne({
   brand: "Brand",
   frame: "Metallic",
@@ -77,8 +138,4 @@ db.getCollection("ulleres").insertOne({
       recommended_by: null,
     },
   ],
-  sold_by: {
-    employee_name: "Employee 1",
-    date: "2023-07-15T14:30:00Z",
-  },
 });
