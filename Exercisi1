@@ -1,3 +1,64 @@
+//tabla gafas
+{
+  "glasses": {
+    "_id": ObjectId(),
+    "brand": String,
+    "lenses": {
+      "leftLens": {
+        "graduation": String,
+        "color": String
+      },
+      "rightLens": {
+        "graduation": String,
+        "color": String
+      }
+    },
+    "frame": {
+      "type": String, 
+      "color": String
+    },
+    "price": Number,
+    "providerId": ObjectId 
+  }
+}
+//tabla clientes
+{
+  "customers": {
+    "_id": ObjectId(),
+    "name": String,
+    "address": {
+      "street": String,
+      "number": String,
+      "city": String,
+      "postalCode": String,
+      "country": String
+    },
+    "phone": String,
+    "email": String,
+    "registrationDate": Date,
+    "referredBy": ObjectId 
+  }
+}
+//tabla proveedores
+{
+  "provider": {
+    "_id": ObjectId(),
+    "name": String,
+    "address": {
+      "street": String,
+      "number": String,
+      "floor": String,
+      "door": String,
+      "city": String,
+      "postalCode": String,
+      "country": String
+    },
+    "phone": String,
+    "fax": String,
+    "NIF": String
+  }
+}
+//interfaz de la vista de clientes
 db.getCollection("shopping_cart").insertOne({
   name: "Client Name",
   address: {
@@ -25,21 +86,6 @@ db.getCollection("shopping_cart").insertOne({
       },
       frame_Type: "Metallic",
       price: 127.0,
-      provider: {
-        name: "Googles Associated SL",
-        address: {
-          street: "pg.Zona Franca",
-          number: 76,
-          floor: 7,
-          door: "5",
-          city: "Barcelona",
-          postal_code: 08021,
-          country: "Spain",
-        },
-        phone_number: "675468932",
-        fax: "938877554",
-        nif: "B54967769",
-    },
   ],
   recommended_by: "client 3",
   sold_by: {
